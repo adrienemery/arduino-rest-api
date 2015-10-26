@@ -1,4 +1,4 @@
-base_digital_url = "http://localhost:5000/arduino/digital/"
+base_digital_url = "http://localhost:5000/arduino/digital/";
 
 function set_pin_high() {
   pin_num = $('#pin_select').val();
@@ -13,7 +13,7 @@ function set_pin_high() {
   }).then(function(data) {
      console.log(data)
   });
-}
+};
 
 function set_pin_low() {
   pin_num = $('#pin_select').val();
@@ -27,15 +27,4 @@ function set_pin_low() {
   }).then(function(data) {
      console.log(data)
   });
-}
-
-// $(document).ready(function() {
-//     $.ajax({
-//         url: "http://localhost:5000/led",
-//         type: "GET",
-//         contentType: "application/json",
-//     }).then(function(data) {
-//        console.log(data)
-//        $('.status').html("Status: " + String(data.status));
-//     });
-// });
+};
