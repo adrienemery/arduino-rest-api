@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Arduino REST API</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Home</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Arduino REST API</h1>
+            <!-- <p class="lead">Select the pin you want to read or write to an</p> -->
+            <p class="lead">
+              <!-- Pin Select -->
+              Select Pin:
+              <select class="btn btn-lg btn-default" id="pin_select">
+                <option value="0">Digital 0</option>
+                <option value="1">Digital 1</option>
+                <option value="2">Digital 2</option>
+                <option value="2">Digital 3</option>
+                <option value="2">Digital 4</option>
+                <option value="2">Digital 5</option>
+                <option value="2">Digital 6</option>
+                <option value="2">Digital 7</option>
+                <option value="2">Digital 8</option>
+                <option value="2">Digital 9</option>
+                <option value="2">Digital 10</option>
+                <option value="2">Digital 11</option>
+                <option value="2">Digital 12</option>
+                <option value="13" selected>Digital 13</option>
+              </select>
+
+            </p>
+          </div>
+          <div class="">
+            <p class="lead">
+              Set Value:
+              <button class="btn btn-lg btn-primary" type="button" name="on_btn" onclick="set_pin_high()">On</button>
+              <button class="btn btn-lg btn-danger" type="button" name="off_btn" onclick="set_pin_low()">Off</button>
+              </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Load Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js">
+    </script>
+  </body>
+</html>
