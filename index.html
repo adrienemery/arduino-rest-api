@@ -19,37 +19,26 @@
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Home</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-
           <div class="inner cover">
             <h1 class="cover-heading">Arduino REST API</h1>
-            <!-- <p class="lead">Select the pin you want to read or write to an</p> -->
+            <br>
             <p class="lead">
               <!-- Pin Select -->
-              Select Pin:
-              <select class="btn btn-lg btn-default" id="pin_select">
+              Select Pin (PWM~):
+              <select class="btn btn-lg btn-default" id="pin_select" onchange="check_if_pwm()">
                 <option value="0">Digital 0</option>
                 <option value="1">Digital 1</option>
                 <option value="2">Digital 2</option>
-                <option value="2">Digital 3</option>
-                <option value="2">Digital 4</option>
-                <option value="2">Digital 5</option>
-                <option value="2">Digital 6</option>
-                <option value="2">Digital 7</option>
-                <option value="2">Digital 8</option>
-                <option value="2">Digital 9</option>
-                <option value="2">Digital 10</option>
-                <option value="2">Digital 11</option>
-                <option value="2">Digital 12</option>
+                <option value="3">Digital 3~</option>
+                <option value="4">Digital 4</option>
+                <option value="5">Digital 5~</option>
+                <option value="6">Digital 6~</option>
+                <option value="7">Digital 7</option>
+                <option value="8">Digital 8</option>
+                <option value="9">Digital 9~</option>
+                <option value="10">Digital 10~</option>
+                <option value="11">Digital 11~</option>
+                <option value="12">Digital 12</option>
                 <option value="13" selected>Digital 13</option>
               </select>
 
@@ -58,9 +47,21 @@
           <div class="">
             <p class="lead">
               Set Value:
-              <button class="btn btn-lg btn-primary" type="button" name="on_btn" onclick="set_pin_high()">On</button>
-              <button class="btn btn-lg btn-danger" type="button" name="off_btn" onclick="set_pin_low()">Off</button>
+              <button class="btn btn-lg btn-primary" type="button" name="on_btn" onclick="set_pin_high()">HIGH</button>
+              <button class="btn btn-lg btn-primary" type="button" name="off_btn" onclick="set_pin_low()">LOW</button>
               </p>
+          </div>
+
+          <div class="" id="pwm" style="display:none;">
+            <p class="lead">
+              Enter PWM value (between 0 and 255):
+            </p>
+              <form id="pwm_form">
+                <input class="btn btn-lg btn-default" type="number" name="pwm" min="0" max="255" value="0">
+                <!-- <button class="btn btn-lg btn-primary" type="button" name="set_pwm_btn" onclick="set_pwm()">Set</button> -->
+                <input class="btn btn-lg btn-primary" type="submit" value="Set">
+              </form>
+
           </div>
 
           <div class="mastfoot">

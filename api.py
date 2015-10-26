@@ -60,6 +60,16 @@ def get_digital_pin_value(pin_id):
     return jsonify({'value': pin_data[str(pin_id)]}), 200
 
 
+@app.route('/arduino/pwm/<int:pin_id>', methods=['PATCH'])
+def update_pwm(pin_id):
+    """ Update the value of the digital pin specified """
+    if not request.json:
+        abort(400)
+    # pin_value = request.json.get('value')
+    # set_digital_pin(pin_id, pin_value)
+    return jsonify({'value': 0}), 200
+
+
 if __name__ == '__main__':
     # attach callbacks
     messenger.attach(func=on_set_digital_pin,
