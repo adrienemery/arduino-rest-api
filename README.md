@@ -9,6 +9,6 @@ To start the flask server run:
 
 `python api.py`
 
-Now open `index.html' in your web browser and all should be good in the world.
+Now open `index.html` in your web browser and all should be good in the world.
 
 
